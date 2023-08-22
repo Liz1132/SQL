@@ -1,0 +1,20 @@
+CREATE TABLE products (id INTEGER PRIMARY KEY, product TEXT, inventory INTEGER, price INTEGER, discount INTEGER);
+
+INSERT INTO products VALUES(1, "clear quartz heart",20, 19.95, 0);
+INSERT INTO products VALUES(2, "clear quartz pocket angel",40,15.00,2.00);
+INSERT INTO products VALUES(3, "amethyst polished point",32,4.99,0); 
+INSERT INTO products VALUES(4, "smokey quartz",10,25.50,4.99);
+INSERT INTO products VALUES(5, "blue lace agate",12,14,0);
+INSERT INTO products VALUES(6, "pyrite",19,28.50,1);
+INSERT INTO products VALUES(7, "red quartz",17,8.99,3.00);
+INSERT INTO products VALUES(8, "rose quartz rainbow",11,44.00,0);
+INSERT INTO products VALUES(9, "brazil chip crystal",12,31.99,0);
+INSERT INTO products VALUES(10, "snowflake obsidian",13, 14.98,1.99);
+INSERT INTO products VALUES(11,"tiger eye red",25,4.87,.50);
+INSERT INTO products VALUES(12,"tiger eye pointer",8,15,0);
+INSERT INTO products VALUES(13,"white opal",5,6.99,0);
+INSERT INTO products VALUES(14,"blue round sphere",16,18.50,3);
+INSERT INTO products VALUES(15,"clear round sphere",9,10.50,0);
+
+SELECT * FROM products ORDER BY price;
+SELECT discount, SUM(inventory) FROM products GROUP BY discount;
